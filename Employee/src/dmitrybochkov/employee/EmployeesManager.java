@@ -4,7 +4,7 @@ package dmitrybochkov.employee;
 import java.util.ArrayList;
 
 /*
-    Я решил, что это будет такой адаптер между контейнером и непосредственно пользователем.
+    РЇ СЂРµС€РёР», С‡С‚Рѕ СЌС‚Рѕ Р±СѓРґРµС‚ С‚Р°РєРѕР№ Р°РґР°РїС‚РµСЂ РјРµР¶РґСѓ РєРѕРЅС‚РµР№РЅРµСЂРѕРј Рё РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј.
  */
 class EmployeesManager {
 
@@ -12,7 +12,7 @@ class EmployeesManager {
         System.out.println("New Employee...");
 
         System.out.print("Name: ");
-        String name = System.console().readLine(); //Только в консоли работает.
+        String name = System.console().readLine(); //РўРѕР»СЊРєРѕ РІ РєРѕРЅСЃРѕР»Рё СЂР°Р±РѕС‚Р°РµС‚.
 
         System.out.print("/nSurname: ");
         String surname = System.console().readLine();
@@ -28,7 +28,7 @@ class EmployeesManager {
         }
         catch (NumberFormatException e){
             e.printStackTrace();
-            //Все сломалось.
+            //Р’СЃРµ СЃР»РѕРјР°Р»РѕСЃСЊ.
         }
 
         int salary = Employee.UNDEFINED_SALARY;
@@ -41,7 +41,7 @@ class EmployeesManager {
             }
             catch (NumberFormatException e){
                 e.printStackTrace();
-                //Снова :ссс
+                //РЎРЅРѕРІР° :СЃСЃСЃ
             }
         }
 
@@ -50,9 +50,9 @@ class EmployeesManager {
     }
 
     private static void outputEmployee(final Employee employee){
-        //Здесь надо что-то с ресурсами мутить, а то с локализацией проблемы и т.п., не хардкодить ведь.
+        //Р—РґРµСЃСЊ РЅР°РґРѕ С‡С‚Рѕ-С‚Рѕ СЃ СЂРµСЃСѓСЂСЃР°РјРё РјСѓС‚РёС‚СЊ, Р° С‚Рѕ СЃ Р»РѕРєР°Р»РёР·Р°С†РёРµР№ РїСЂРѕР±Р»РµРјС‹ Рё С‚.Рї., РЅРµ С…Р°СЂРґРєРѕРґРёС‚СЊ РІРµРґСЊ.
         String position = "no position";
-        switch (employee.getPosition()) { //Надо было сразу список позиций делать, а то это не оч, что я сейчас творю.
+        switch (employee.getPosition()) { //РќР°РґРѕ Р±С‹Р»Рѕ СЃСЂР°Р·Сѓ СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ РґРµР»Р°С‚СЊ, Р° С‚Рѕ СЌС‚Рѕ РЅРµ РѕС‡, С‡С‚Рѕ СЏ СЃРµР№С‡Р°СЃ С‚РІРѕСЂСЋ.
             case Employee.POSITION_1:
                 position = "Position1";
                 break;

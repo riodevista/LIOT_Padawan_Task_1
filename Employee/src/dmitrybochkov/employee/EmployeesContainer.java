@@ -27,7 +27,7 @@ public class EmployeesContainer implements IEmployeesContainer{
         Employee employee = new Employee(name, surname, position, salary);
         employees.add(employee);
     }
-    
+
     public void add(final String name, final String surname){
         Employee employee = new Employee(name, surname);
         employees.add(employee);
@@ -39,15 +39,15 @@ public class EmployeesContainer implements IEmployeesContainer{
     }
 
     public ArrayList<Employee> getEmployees(){
-        return employees; //Отдадим ссылку на сам объект, а не на копию.
+        return employees; //РћС‚РґР°РґРёРј СЃСЃС‹Р»РєСѓ РЅР° СЃР°Рј РѕР±СЉРµРєС‚, Р° РЅРµ РЅР° РєРѕРїРёСЋ.
     }
 
     public int size(){
         return employees.size();
     }
 
-    /*Должен ли контейнер сам себя сортировать? В ArrayList есть метод sort, так что последовал
-    * по этому пути.
+    /*Р”РѕР»Р¶РµРЅ Р»Рё РєРѕРЅС‚РµР№РЅРµСЂ СЃР°Рј СЃРµР±СЏ СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ? Р’ ArrayList РµСЃС‚СЊ РјРµС‚РѕРґ sort, С‚Р°Рє С‡С‚Рѕ РїРѕСЃР»РµРґРѕРІР°Р»
+    * РїРѕ СЌС‚РѕРјСѓ РїСѓС‚Рё.
     */
     public void sort(final int key){
         switch (key){
@@ -60,6 +60,6 @@ public class EmployeesContainer implements IEmployeesContainer{
             default:
                 break;
         }
-        //Хотя забавно, что я реализовал другим путем, когда сортировка происходит извне :)
+        //РҐРѕС‚СЏ Р·Р°Р±Р°РІРЅРѕ, С‡С‚Рѕ СЏ СЂРµР°Р»РёР·РѕРІР°Р» РґСЂСѓРіРёРј РїСѓС‚РµРј, РєРѕРіРґР° СЃРѕСЂС‚РёСЂРѕРІРєР° РїСЂРѕРёСЃС…РѕРґРёС‚ РёР·РІРЅРµ :)
     }
 }
