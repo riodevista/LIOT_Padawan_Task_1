@@ -1,8 +1,5 @@
 package dmitrybochkov.employee;
 
-
-import java.util.ArrayList;
-
 /*
     Я решил, что это будет такой адаптер между контейнером и непосредственно пользователем.
  */
@@ -14,13 +11,13 @@ class EmployeesManager {
         System.out.print("Name: ");
         String name = System.console().readLine(); //Только в консоли работает.
 
-        System.out.print("/nSurname: ");
+        System.out.print("\nSurname: ");
         String surname = System.console().readLine();
 
-        System.out.print("Enter number for position:/n" +
-                "1.Position1/n" +
-                "2.Position2/n" +
-                "3.Position3/n");
+        System.out.print("Enter number for position:\n" +
+                "1.Position1\n" +
+                "2.Position2\n" +
+                "3.Position3\n");
         String p = System.console().readLine();
         int position = Employee.UNDEFINED_POSITION;
         try {
@@ -34,7 +31,7 @@ class EmployeesManager {
         int salary = Employee.UNDEFINED_SALARY;
 
         if (position != Employee.UNDEFINED_POSITION){
-            System.out.print("/nSalary: ");
+            System.out.print("\nSalary: ");
             String s = System.console().readLine();
             try {
                 salary = Integer.parseInt(s);

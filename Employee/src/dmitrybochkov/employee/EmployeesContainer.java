@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class EmployeesContainer implements IEmployeesContainer{
-    private static final int KEY_SURNAME = 1;
-    private static final int KEY_SALARY = 2;
+    public static final int KEY_SURNAME = 1;
+    public static final int KEY_SALARY = 2;
 
     private ArrayList<Employee> employees;
 
