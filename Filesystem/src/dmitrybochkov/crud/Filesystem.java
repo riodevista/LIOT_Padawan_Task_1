@@ -12,7 +12,7 @@ public class Filesystem {
 
     public void create(String path, IFilesystemItem item){
         IDirectory dirToCreate = (IDirectory) getItem(path);
-        //Можно реализовать создание несуществующих директорий к файлу, но суть ведь в интерфейсах, а не в алгоритмах.
+        //РњРѕР¶РЅРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ СЃРѕР·РґР°РЅРёРµ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёС… РґРёСЂРµРєС‚РѕСЂРёР№ Рє С„Р°Р№Р»Сѓ, РЅРѕ СЃСѓС‚СЊ РІРµРґСЊ РІ РёРЅС‚РµСЂС„РµР№СЃР°С…, Р° РЅРµ РІ Р°Р»РіРѕСЂРёС‚РјР°С….
         if(dirToCreate != null){
             dirToCreate.getContent().put(item.getName(), item);
         }
@@ -29,8 +29,8 @@ public class Filesystem {
             return;
         IDirectory parentDir = (IDirectory) getItem(path.substring(path.lastIndexOf("/"), path.length()));
         if(itemToUpdate.getClass() == item.getClass()){
-            parentDir.getContent().remove(itemToUpdate.getName()); //Удаляем старый
-            parentDir.getContent().put(item.getName(), item); //Перемещаем новый
+            parentDir.getContent().remove(itemToUpdate.getName()); //РЈРґР°Р»СЏРµРј СЃС‚Р°СЂС‹Р№
+            parentDir.getContent().put(item.getName(), item); //РџРµСЂРµРјРµС‰Р°РµРј РЅРѕРІС‹Р№
         }
     }
 
@@ -38,7 +38,7 @@ public class Filesystem {
         IFilesystemItem itemToDelete = getItem(path);
         if(itemToDelete == null || itemToDelete == root)
             return;
-        IDirectory parentDir = (IDirectory) getItem(path.substring(path.lastIndexOf("/"), path.length())); //Если в конце будет /, то не сработает :с
+        IDirectory parentDir = (IDirectory) getItem(path.substring(path.lastIndexOf("/"), path.length())); //Р•СЃР»Рё РІ РєРѕРЅС†Рµ Р±СѓРґРµС‚ /, С‚Рѕ РЅРµ СЃСЂР°Р±РѕС‚Р°РµС‚ :СЃ
         parentDir.getContent().remove(itemToDelete.getName());
     }
 
@@ -52,7 +52,7 @@ public class Filesystem {
         else{
             do{
                 path = path.substring(path.indexOf("/") + 1, path.length());
-                //Если то был конец пути, то возвращаем, что уже есть.
+                //Р•СЃР»Рё С‚Рѕ Р±С‹Р» РєРѕРЅРµС† РїСѓС‚Рё, С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµРј, С‡С‚Рѕ СѓР¶Рµ РµСЃС‚СЊ.
                 if(path.equals("")){
                     return currentItem;
                 }

@@ -1,8 +1,5 @@
 package dmitrybochkov.crud;
 
-/**
- * Created by Riodevista on 03.09.2015.
- */
 public class File implements IFilesystemItem, IFile {
 
     private String name;
@@ -58,7 +55,7 @@ public class File implements IFilesystemItem, IFile {
 
     @Override
     public int getSize() {
-        //Как-то рассчитываем по data.
+        //РљР°Рє-С‚Рѕ СЂР°СЃСЃС‡РёС‚С‹РІР°РµРј РїРѕ data.
         return 0;
     }
 }

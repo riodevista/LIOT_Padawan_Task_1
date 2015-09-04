@@ -2,9 +2,6 @@ package dmitrybochkov.crud;
 
 import java.util.HashMap;
 
-/**
- * Created by Riodevista on 03.09.2015.
- */
 public class Directory implements IFilesystemItem, IDirectory{
 
     private String name;
@@ -48,7 +45,7 @@ public class Directory implements IFilesystemItem, IDirectory{
 
     @Override
     public int getSize() {
-        //Здесь подсчитываем суммарный вес директории.
+        //Р—РґРµСЃСЊ РїРѕРґСЃС‡РёС‚С‹РІР°РµРј СЃСѓРјРјР°СЂРЅС‹Р№ РІРµСЃ РґРёСЂРµРєС‚РѕСЂРёРё.
         return 0;
     }
 }
