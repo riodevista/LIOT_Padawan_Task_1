@@ -1,9 +1,6 @@
 package dmitrybochkov.employee;
 
-import dmitrybochkov.employee.positions.Director;
 import dmitrybochkov.employee.positions.Employee;
-import dmitrybochkov.employee.positions.Manager;
-import dmitrybochkov.employee.positions.Seller;
 
 import java.util.ArrayList;
 
